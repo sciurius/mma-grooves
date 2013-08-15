@@ -49,9 +49,10 @@ End
 // To this, add a clean electric guitar with capo at 8.
 
 Begin Plectrum-GuitarBallad1
-    Copy Plectrum-GuitarBallad
+    Copy   Plectrum-GuitarBallad
     Voice  CleanGuitar
     Capo   8
+    RTime  4
     Volume 60
 End
 
