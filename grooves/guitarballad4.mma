@@ -1,4 +1,4 @@
-// GuitarBallad - Groove for MMA
+// GuitarBallad4 - Groove for MMA
 //
 // Copyright (C) 2013, Johan Vromans
 //
@@ -11,8 +11,9 @@
 
 Begin Doc
 
-  This style implements GuitarBallad, a bright acoustic guitar. It has
+  This style implements GuitarBallad4, a bright acoustic guitar. It has
   main strums on the beats, and reverse strums in between.
+  Time signature is 4/4.
 
   For best results, use a warm sound font.
 
@@ -77,6 +78,6 @@ Begin Drum
     Tone  HighWoodBlock
 End
 
-DefGroove GuitarBallad  A clean and brilliant acoustic guitar, \
-	  		calmly strummed in a 4/4 time.
+DefGroove GuitarBallad4  A clean and brilliant acoustic guitar, \
+	  		 calmly strummed in a 4/4 time.
 
