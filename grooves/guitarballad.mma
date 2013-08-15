@@ -1,36 +1,82 @@
+// GuitarBallad - Groove for MMA
+//
+// Copyright (C) 2013, Johan Vromans
+//
+// This is free software. You can redistribute it and/or modify it under
+// the terms of the Artistic License 2.0.
+// 
+// This software is distributed in the hope that it will be useful, but
+// without any warranty; without even the implied warranty of
+// merchantability or fitness for a particular purpose.
+
+Begin Doc
+
+  This style implements GuitarBallad, a bright acoustic guitar. It has
+  main strums on the beats, and reverse strums in between.
+
+  For best results, use a warm sound font.
+
+End
+
+Author Johan Vromans
+
 SeqClear                        // New Groove
 SeqSize 1			// 1 bar in this sequence
 Time 4				// 4 beats in a bar
 Timesig 4 4                     // time Signature to 4/4
 
+// Nice warm sound from a classical guitar.
+
 Begin Plectrum-GuitarBallad
     Voice  NylonGuitar
     Volume 80
-    MIDIVoice 1 91  80
-    MIDIVoice 1 93  80
+    //MIDIVoice 1 91  80	// Reverb
+    //MIDIVoice 1 93  80	// Chorus
     Channel 2
+    RTime 4
     Sequence {
-	1.0 +5 100  90  90  90  90  90 ;
-	2.0 +10  -  80  80  80  80  80 ;
-	2.5 -5   -   -  80  80  80  80 ;
-	3.0 +5   -  80  80  80  80   - ;
-	3.5 -5   -   -  80  80  80   - ;
-	4.0 +5   -  80  80  80  80  80 ;
-	4.5 -5   -   -  60  60  60   - ;
+	0.95  +5  90  80  80  80  80  80 ;
+	1.9  +10   -  80  80  80  80  80 ;
+	2.5   -5   -   -  80  80  80  80 ;
+	2.95  +5   -  80  80  80  80   - ;
+	3.5   -5   -   -  80  80  80   - ;
+	3.95  +5   -  80  80  80  80  80 ;
+	4.5   -5   -   -  60  60  60   - ;
     }
 End
+
+// To this, add a clean electric guitar with capo at 8.
+
 Begin Plectrum-GuitarBallad1
-    Copy   Plectrum-GuitarBallad
+    Copy Plectrum-GuitarBallad
     Voice  CleanGuitar
     Capo   8
     Volume 60
 End
+
+// Finally, a bass to emphasis the first beat.
+
 Begin Bass
-    Voice FingeredBass
-    Volume 120
+    Voice AcousticBass
     Sequence {
-        1 1 1 80 ; 3 1 1 70 ;
+        1 2 1 80 ;
     }
 End
 
-DefGroove GuitarBallad
+// Metronome ticks for debugging and development.
+
+Set TickVolume 0
+Begin Drum
+    Volume $TickVolume
+    Sequence {
+       1 0 80 ;
+       2 0 80 ;
+       3 0 80 ;
+       4 0 80 ;
+    }
+    Tone  HighWoodBlock
+End
+
+DefGroove GuitarBallad  A clean and brilliant acoustic guitar, \
+	  		calmly strummed in a 4/4 time.
+
