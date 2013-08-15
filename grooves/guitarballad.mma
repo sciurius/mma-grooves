@@ -1,0 +1,36 @@
+SeqClear                        // New Groove
+SeqSize 1			// 1 bar in this sequence
+Time 4				// 4 beats in a bar
+Timesig 4 4                     // time Signature to 4/4
+
+Begin Plectrum-GuitarBallad
+    Voice  NylonGuitar
+    Volume 80
+    MIDIVoice 1 91  80
+    MIDIVoice 1 93  80
+    Channel 2
+    Sequence {
+	1.0 +5 100  90  90  90  90  90 ;
+	2.0 +10  -  80  80  80  80  80 ;
+	2.5 -5   -   -  80  80  80  80 ;
+	3.0 +5   -  80  80  80  80   - ;
+	3.5 -5   -   -  80  80  80   - ;
+	4.0 +5   -  80  80  80  80  80 ;
+	4.5 -5   -   -  60  60  60   - ;
+    }
+End
+Begin Plectrum-GuitarBallad1
+    Copy   Plectrum-GuitarBallad
+    Voice  CleanGuitar
+    Capo   8
+    Volume 60
+End
+Begin Bass
+    Voice FingeredBass
+    Volume 120
+    Sequence {
+        1 1 1 80 ; 3 1 1 70 ;
+    }
+End
+
+DefGroove GuitarBallad
