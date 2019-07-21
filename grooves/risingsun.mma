@@ -1,0 +1,114 @@
+// Risingsun - Groove for MMA
+//
+// Copyright (C) 2019, Johan Vromans
+//
+// This is free software. You can redistribute it and/or modify it under
+// the terms of the Artistic License 2.0.
+// 
+// This software is distributed in the hope that it will be useful, but
+// without any warranty; without even the implied warranty of
+// merchantability or fitness for a particular purpose.
+
+Begin Doc
+
+  This style implements RisingSun, the strum pattern made eternally
+  famous 55 years ago by the Animals in their version of The House Of
+  The Rising Sun.
+
+  The style consists of three grooves with identical strumming but a
+  different base note.
+
+  When you play this groove file you'll hear the first 16 bars of the
+  song. The rest of the song is just repeating these 16 bars.
+  
+End
+
+Author Johan Vromans
+
+SeqClear                        // New Groove
+
+SeqSize 1
+Time 6				// 6/8
+
+// Basic strum, with A bass.
+Begin Plectrum
+    Voice       CleanGuitar
+    Sequence {
+            1.0    0   5:90;
+            2.1    0   4:80;
+            2.8    0   3:80;
+            3.2    0   2:80;
+	    4.0	   0   1:90;
+	    5.0	   0   2:80;
+	    6.0	   0   3:80;
+    }
+    RTime 10
+    RVolume 15
+End
+
+DefGroove RisingSunA
+
+// Same, with D bass.
+Begin Plectrum
+    Voice       CleanGuitar
+    Sequence {
+            1.0    0   4:90;
+            2.1    0   4:80;
+            2.8    0   3:80;
+            3.2    0   2:80;
+	    4.0	   0   1:90;
+	    5.0	   0   2:80;
+	    6.0	   0   3:80;
+    }
+    RTime 10
+    RVolume 15
+End
+
+DefGroove RisingSunD
+
+// Same, with low E bass.
+Begin Plectrum
+    Sequence {
+            1.0    0   6:90;
+            2.1    0   4:80;
+            2.8    0   3:80;
+            3.2    0   2:90;
+	    4.0	   0   1:80;
+	    5.0	   0   2:80;
+	    6.0	   0   3:80;
+    }
+End
+
+DefGroove RisingSunE
+
+////////////////
+
+Time		6
+Tempo		240
+
+Groove RisingSunA
+ 1	Am
+ 2	C
+Groove RisingSunD
+ 3	D
+ 4	F
+Groove RisingSunA
+ 5	Am
+ 6	C
+Groove RisingSunE
+ 7	E
+ 8	E
+Groove RisingSunA
+ 9	Am
+10	C
+Groove RisingSunD
+11	D
+12	F
+Groove RisingSunA
+13	Am
+Groove RisingSunE
+14	E
+Groove RisingSunA
+15	Am
+Groove RisingSunE
+16	E
