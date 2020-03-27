@@ -65,20 +65,18 @@ Begin Bass
     }
 End
 
-// Metronome ticks for debugging and development.
-
-Set TickVolume 0
-Begin Drum
-    Volume $TickVolume
-    Sequence {
-       1 0 80 ;
-       2 0 80 ;
-       3 0 80 ;
-       4 0 80 ;
-    }
-    Tone  HighWoodBlock
-End
-
 DefGroove GuitarBallad4  A clean and brilliant acoustic guitar, \
 	  		 calmly strummed in a 4/4 time.
 
+Begin Plectrum-GuitarBallad
+    Sequence {
+	1  +15  90  80  80  80  80  80 ;
+    }
+End
+Begin Plectrum-GuitarBallad1
+    Sequence {
+	1  +15  90  80  80  80  80  80 ;
+    }
+End
+
+DefGroove GuitarBallad4End End strum for GuitarBallad4

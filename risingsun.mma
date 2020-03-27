@@ -30,9 +30,13 @@ SeqClear                        // New Groove
 SeqSize 1
 Time 6				// 6/8
 
+Set Instrument CleanGuitar
+Set RTime      10
+Set RVolume    5
+
 // Basic strum, with A bass.
 Begin Plectrum
-    Voice       CleanGuitar
+    Voice       $Instrument
     Sequence {
             1.0    0   5:90;
             2.1    0   4:80;
@@ -42,15 +46,15 @@ Begin Plectrum
 	    5.0	   0   2:80;
 	    6.0	   0   3:80;
     }
-    RTime 10
-    RVolume 15
+    RTime   $RTime
+    RVolume $RVolume
 End
 
 DefGroove RisingSunA
 
 // Same, with D bass.
 Begin Plectrum
-    Voice       CleanGuitar
+    Voice       $Instrument
     Sequence {
             1.0    0   4:90;
             2.1    0   4:80;
@@ -60,14 +64,15 @@ Begin Plectrum
 	    5.0	   0   2:80;
 	    6.0	   0   3:80;
     }
-    RTime 10
-    RVolume 15
+    RTime   $RTime
+    RVolume $RVolume
 End
 
 DefGroove RisingSunD
 
 // Same, with low E bass.
 Begin Plectrum
+    Voice       $Instrument
     Sequence {
             1.0    0   6:90;
             2.1    0   4:80;
@@ -77,11 +82,17 @@ Begin Plectrum
 	    5.0	   0   2:80;
 	    6.0	   0   3:80;
     }
+    RTime   $RTime
+    RVolume $RVolume
 End
 
 DefGroove RisingSunE
 
 ////////////////
+
+print $_FileName  $_SongFileName
+
+If Def Play
 
 Time		6
 Tempo		240
@@ -112,3 +123,5 @@ Groove RisingSunA
 15	Am
 Groove RisingSunE
 16	E
+
+EndIf
