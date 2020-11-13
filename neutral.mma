@@ -1,0 +1,133 @@
+Begin Doc
+
+  This style implements a couple of 'neutral' grooves. Each groove
+  consists of a soft, continuous organ and a simple drum pattern.
+
+  Its main use is for setting up new songs, when chords, progressions
+  and rhythms are most interesting, and for computer generated songs,
+  so you have a feel what the song sounds like. Later you can fill the
+  other instruments.
+
+End
+
+Begin DocVar
+  RTime      If defined, sets the randomizer for Time (drums only).
+  RVolume    If defined, sets the randomizer for Volume (drums only).
+End
+
+Author Johan Vromans
+
+/**************** Neutral44, for 4/4 time ****************/
+
+SeqClear
+SeqSize 4
+Time 4/4
+
+Begin Drum-Side
+    Tone        KickDrum1
+    Sequence    { 1.0 0 60 }
+    Volume      30
+End
+
+Begin Drum-CHH
+    Tone        ClosedHiHat
+    Sequence    { 1 0 90; 2 0 30; 3 0 50; 4 0 30 }
+    Volume      30
+End
+
+Begin Chord
+    Voice	ReedOrgan
+    Sequence	{ 1 1 50 }
+    Volume	30
+    Articulate 	100
+End
+
+// Randomizers, if defined.
+If Def RVolume
+Drum-Side    RVolume	$RVolume
+Drum-CHH     RVolume	$RVolume
+// or: AllTracks Drum RVolume $RVolume 
+EndIf
+If Def RTime
+Drum-Side    RTime	$RTime
+Drum-CHH     RTime	$RTime
+EndIf
+
+DefGroove Neutral44 Time = 4/4, SeqLen = 4; Kick, ClosedHat.
+
+/**************** Neutral34, for 3/4 time ****************/
+
+SeqClear
+SeqSize 4
+Time 3/4
+
+Begin Drum-Side
+    Tone        KickDrum1
+    Sequence    { 1.0 0 60 }
+    Volume      30
+End
+
+Begin Drum-CHH
+    Tone        ClosedHiHat
+    Sequence    { 1 0 90; 2 0 30; 3 0 30 }
+    Volume      30
+End
+
+Begin Chord
+    Voice	ReedOrgan
+    Sequence	{ 1 2. 50 }
+    Volume	30
+    Articulate 	100
+End
+
+// Randomizers, if defined.
+If Def RVolume
+Drum-Side    RVolume	$RVolume
+Drum-CHH     RVolume	$RVolume
+// or: AllTracks Drum RVolume $RVolume 
+EndIf
+If Def RTime
+Drum-Side    RTime	$RTime
+Drum-CHH     RTime	$RTime
+EndIf
+
+DefGroove Neutral34 Time = 3/4, SeqLen = 4; Kick, ClosedHat.
+
+/**************** Neutral68, for 6/8 time ****************/
+
+SeqClear
+SeqSize 4
+Time 6/8
+
+Begin Drum-Side
+    Tone        KickDrum1
+    Sequence    { 1.0 0 60 }
+    Volume      30
+End
+
+Begin Drum-CHH
+    Tone        ClosedHiHat
+    Sequence    { 1 0 90; 2 0 30; 3 0 30; 4 0 80; 5 0 30; 6 0 30 } 
+    Volume      30
+End
+
+Begin Chord
+    Voice	ReedOrgan
+    Sequence	{ 1 1. 50 }
+    Volume	30
+    Articulate 	100
+End
+
+// Randomizers, if defined.
+If Def RVolume
+Drum-Side    RVolume	$RVolume
+Drum-CHH     RVolume	$RVolume
+// or: AllTracks Drum RVolume $RVolume 
+EndIf
+If Def RTime
+Drum-Side     RTime	$RTime
+Drum-CHH      RTime	$RTime
+EndIf
+
+DefGroove Neutral68 Time = 6/8, SeqLen = 4; Kick, ClosedHat.
+
