@@ -1,0 +1,24 @@
+// Testing BasicPick4
+
+Time 4/4
+
+Tempo 120
+
+Groove BasicPick4E
+  1   Em * 2
+Groove BasicPick4A
+  3   Am
+Groove BasicPick4E
+  4   Em
+Groove BasicPick4A
+  5   Am
+Groove BasicPick4E
+  6   Em
+Groove BasicPick4D
+  7   D
+Groove BasicPick4E
+  8   Em
+Groove BasicPick4End
+  9   Em
+// Let it sound
+ 10   z

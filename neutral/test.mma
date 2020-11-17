@@ -1,0 +1,29 @@
+// Testing Neutral
+
+Time 4/4
+TimeSig 4/4
+Tempo 100
+
+Groove Neutral44
+
+  1   Em * 2
+  3   Am
+  4   Em
+  5   Am
+  6   Em
+  7   D
+  8   Em
+
+Time 6/8
+TimeSig 6/8
+Tempo 100
+
+Groove Neutral68
+
+ 11   Em * 2
+ 13   Am
+ 14   Em
+ 15   Am
+ 16   Em
+ 17   D
+ 18   Em

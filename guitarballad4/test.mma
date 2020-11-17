@@ -1,0 +1,18 @@
+// Testing GuitarBallad4
+
+Time 4/4
+
+Tempo 120
+
+Groove GuitarBallad4
+  1   Em * 2
+  3   Am
+  4   Em
+  5   Am
+  6   Em
+  7   D
+  8   Em
+Groove BasicPick4End
+  9   Em
+// Let it sound
+ 10   z
