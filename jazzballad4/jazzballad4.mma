@@ -1,0 +1,124 @@
+// jazzballad4
+
+Begin Doc
+
+  Basic plectrum strum for a 4/4 jazz ballad.
+
+End
+
+Author Johan Vromans
+
+Begin DocVar
+
+Voice	The voice to be used. Defaults to JazzGuitar.
+
+RVolume	For randomizing the volume. Defaults to 10.
+
+RTime	For randomizing the time. Defaults to 5.
+
+End
+
+If NDef Voice
+  Set Voice JazzGuitar
+EndIf
+
+// For randomizing.
+If NDef RVolume
+  Set RVolume 10
+EndIf
+If NDef RTime
+  Set RTime 5
+EndIf
+
+// End Customisations.
+
+// Internal presets.
+If NDef JB4_S
+  Set JB4_S 3
+EndIf
+If NDef JB4_V1
+  Set JB4_V1 1-6:75
+EndIf
+If NDef JB4_V2
+  Set JB4_V2 1-6:70
+EndIf
+
+SeqClear
+SeqSize 4
+
+Begin Plectrum-Strum
+      Voice      $Voice
+      Volume     mp
+      Articulate 20
+      RVolume    $RVolume
+      RTime      $RTime
+      RDuration  5
+      RSkip      0
+      Sequence   { 1 $JB4_S $JB4_V1 ; 2 $JB4_S $JB4_V2 ; \
+      		   3 $JB4_S $JB4_V1 ; 4 $JB4_S $JB4_V2 } \
+		 { 1 $JB4_S $JB4_V1 ; 2 $JB4_S $JB4_V2 ; \
+		   3 $JB4_S $JB4_V1 ; 4 $JB4_S $JB4_V2 }
+End
+
+DefGroove JazzBallad4 Only guitar
+
+Begin Drum-KickDrum2
+      Tone	 KickDrum2
+      Articulate 100
+      Volume  	 M
+      RVolume	 4
+      Sequence   { 1 0 40; 2.66 0 45; 3 0 45; } \
+      		 { 1 0 35; 3    0 45; 4 0 40; }
+End
+
+Begin Drum-PedalHiHat
+      Tone	 PedalHiHat
+      Articulate 100
+      Volume 	 M
+      RVolume	 4
+      Sequence   { 2 0 45; 4 0 45; } \
+      		 { 2 0 50; 4 0 45; }
+End
+
+Begin Drum-OpenHiHat
+      Tone	 OpenHiHat
+      Articulate 100
+      Volume 	 M
+      RVolume	 4
+      Sequence   { 1 0 40; 2.66 0 30; 3 0 30; 4.66 0 30; } \
+      		 { 1 0 40; 2.66 0 35; 3 0 45; 4.66 0 35; }
+End
+
+Begin Bass
+      Voice	 AcousticBass
+      Volume 	 120
+      RVolume	 4
+      Octave 	 3
+      Sequence   { 1 4 1 75; 2.66 16 1 55; 3 4 5 75 } \
+	    	 { 1 4 1 75; 2.66 16 1 55; 3 8. 5 75; 4 8. 5 75 }
+End
+
+DefGroove JazzBallad4A Guitar + Rhythm
+
+Groove JazzBallad4
+
+Begin Drum-OpenHiHat
+      Tone	 OpenHiHat
+      Articulate 100
+      Volume 	 M
+      RVolume	 4
+      Sequence   z { 3.66 0 45 } z { 3.66 0 40 }
+End
+
+Begin Drum-RideCymbal1
+      Tone	 RideCymbal1
+      Articulate 100
+      Volume 	 30
+      RVolume	 4
+      Sequence   { 1 0 75; 2 0 85; 2.66 0 65; 3 0 65; 4 0 90; 4.66 0 70 } \
+	    	 { 1 0 80; 2 0 90; 2.66 0 70; 3 0 75; 4 0 90; 4.66 0 70 } \
+	    	 { 1 0 75; 2 0 90; 2.66 0 75; 3 0 75; 4 0 90; 4.66 0 70 } \
+	    	 { 1 0 75; 2 0 85; 2.66 0 70; 3 0 75; 4 0 90; 4.66 0 70 }
+End
+
+DefGroove JazzBallad4B Guitar + Rhythm

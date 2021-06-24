@@ -23,6 +23,17 @@ Time signature is 4/4.
 
 For best results, use a warm sound font.
 
+### jazzballad4
+
+This style implements JazzBallad4, a lazy jazz combo (guitar, bass,
+drums). It has straightforward strums on the beats.
+
+Two variants: JazzBallad4A and JazzBallad4B.
+
+Time signature is 4/4.
+
+For best results, use a warm sound font.
+
 ### neutral
 
 A couple of 'neutral' grooves: Neutral34, Neutral44 and Neutral68,

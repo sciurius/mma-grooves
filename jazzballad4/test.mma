@@ -1,0 +1,21 @@
+Groove JazzBallad4
+
+Begin Plectrum-Strum Shape
+    C     3 3 2 0 1 0
+    Dm7	  x 0 0 2 1 1
+    F#7	  2 4 2 3 2 2
+    Fmaj7 1 3 3 2 1 0
+    G7	  3 2 0 0 0 1
+    Gm7	  3 5 3 3 3 x
+    G#m7  4 6 4 4 4 x
+End
+
+Tempo 70
+
+Groove JazzBallad4A
+
+  1   C / G#m7
+  2   Gm7 / F#7
+  3   Fmaj7
+  4   Dm7 / G7
+
