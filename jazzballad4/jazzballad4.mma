@@ -51,7 +51,7 @@ Begin Plectrum-Strum
       Volume     mp
       Articulate 20
       RVolume    $RVolume
-      RTime      $RTime
+      RTime      1
       RDuration  5
       RSkip      0
       Sequence   { 1 $JB4_S $JB4_V1 ; 2 $JB4_S $JB4_V2 ; \
@@ -100,7 +100,7 @@ End
 
 DefGroove JazzBallad4A Guitar + Rhythm
 
-Groove JazzBallad4
+Groove JazzBallad4A
 
 Begin Drum-OpenHiHat
       Tone	 OpenHiHat
